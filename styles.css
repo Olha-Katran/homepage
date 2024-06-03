@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", sans-serif;
     line-height: 1.5;
 
     --primary-text-color: #181820;
@@ -14,12 +14,15 @@ body {
     --icon-color: #6a737d;
     --border-color: #ff9a0045;
     --text-decoration-color: #ff9a00;
+
+    background-image: url('assets/background.svg');
+    background-repeat: repeat;
 }
 
 .container {
     margin: 0 auto;
     padding: 0 30px;
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 .fh {
@@ -35,23 +38,33 @@ body {
 }
 
 .resume {
-    margin: 50px auto;
+    margin: 0 auto;
     border: 1px solid #f5f5f5;
-    box-shadow: 1px 1px 7px 7px #f5f5f5;
     padding: 30px 0;
-    max-width: 900px;
+    max-width: 1200px;
+    background-color: white;
+    height: 100vh;
+    align-content: center;
 }
 
 .header {
-    text-align: center;
+    text-align: left;
     margin: 25px 0;
     color: var(--secondary-text-color);
 }
 
 .resume__block {
     border-bottom: 3px solid var(--border-color);
-    padding-bottom: 30px;
+    padding: 0 30px 30px 30px;
     margin-bottom: 15px;
+}
+
+.contact_info_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 50px;
 }
 
 .contact-info__header,
@@ -76,10 +89,11 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-
-.contact-info__block--center {
+.contact-info__header_block {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
     justify-content: center;
-    align-items: center;
 }
 
 .contact-info__item {
@@ -132,10 +146,22 @@ body {
     background-color: inherit;
 }
 
-.intro {
+.main-info_container {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
+}
+
+.border {
+    border: 1px solid var(--border-color);
+}
+
+.main-info_contact {
     margin-top: 2rem;
+}
+
+.intro {
+    margin-top: 2rem;
+    max-width: 450px;
 }
 
 .intro__icon-wrapper {
@@ -170,7 +196,7 @@ body {
 
 .experiences__company {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -297,9 +323,16 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+    body {
+        background-image: none;
+    }
+    .resume__block {
+        padding: 0;
+    }
     .main-info,
     .contact_info_container {
         flex-direction: column;
+        gap: 0;
     }
 
     .contact_info_container {
@@ -310,12 +343,20 @@ body {
         margin-bottom: 20px;
     }
 
+    .main-info_container {
+        flex-direction: column;
+    }
+
     .experiences {
         margin-right: 0;
     }
 
     .modal__qr-codes {
         flex-wrap: wrap;
+    }
+
+    .border {
+        display: none;
     }
 
     .experiences__company {
