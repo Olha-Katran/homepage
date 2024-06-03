@@ -24,7 +24,7 @@ body {
 
 .fh {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -92,6 +92,7 @@ body {
 
 .contact-info__block--center {
     justify-content: center;
+    align-items: center;
 }
 
 .contact-info__item {
@@ -110,6 +111,7 @@ body {
     width: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .contact-info__item-icon path {
@@ -133,6 +135,7 @@ body {
 .intro {
     display: flex;
     justify-content: start;
+    margin-top: 2rem;
 }
 
 .intro__icon-wrapper {
@@ -159,7 +162,7 @@ body {
 .skills__header {
     color: var(--secondary-text-color);
     text-align: center;
-    margin-bottom: 15px;
+    margin: 25px 0;
 }
 
 .skills__text {
@@ -174,8 +177,14 @@ body {
 
 .experiences__header {
     color: var(--secondary-text-color);
-    text-align: left;
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.experiences__company {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .experiences__company-header-durability {
@@ -226,8 +235,8 @@ body {
 
 .additional-info__education-header {
     color: var(--secondary-text-color);
-    text-align: left;
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 25px 0;
 }
 
 .additional-info__education-university-durability {
@@ -253,8 +262,8 @@ body {
 
 .additional-info__languages-header {
     color: var(--secondary-text-color);
-    text-align: left;
-    margin-bottom: 20px;
+    text-align: center;
+    margin: 25px 0;
 }
 
 .additional-info__languages-item {
