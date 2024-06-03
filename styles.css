@@ -54,29 +54,6 @@ body {
     margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
-    .main-info,
-    .contact_info_container {
-        flex-direction: column;
-    }
-
-    .contact_info_container {
-        align-items: center;
-    }
-
-    .contact-info__block:not(:last-child) {
-        margin-bottom: 20px;
-    }
-
-    .experiences {
-        margin-right: 0;
-    }
-    .modal__qr-codes {
-        flex-wrap: wrap;
-
-    }
-}
-
 .contact-info__header,
 .contact-info__sub-header {
     text-align: center;
@@ -317,4 +294,32 @@ body {
 .modal__qr-code img {
     width: 80%;
     height: 90%;
+}
+
+@media screen and (max-width: 576px) {
+    .main-info,
+    .contact_info_container {
+        flex-direction: column;
+    }
+
+    .contact_info_container {
+        align-items: center;
+    }
+
+    .contact-info__block:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .experiences {
+        margin-right: 0;
+    }
+
+    .modal__qr-codes {
+        flex-wrap: wrap;
+    }
+
+    .experiences__company {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
