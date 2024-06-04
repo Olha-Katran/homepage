@@ -19,10 +19,34 @@ body {
     background-repeat: repeat;
 }
 
+.content {
+    margin: 0 auto;
+    border: 1px solid #f5f5f5;
+    padding: 30px 0;
+    max-width: 1200px;
+    background-color: white;
+    height: 100vh;
+    align-content: center;
+}
+
 .container {
     margin: 0 auto;
     padding: 0 30px;
     max-width: 1200px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.footer_content {
+    margin-left: 30px;
+    margin-right: 50px;
 }
 
 .fh {
@@ -35,16 +59,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.resume {
-    margin: 0 auto;
-    border: 1px solid #f5f5f5;
-    padding: 30px 0;
-    max-width: 1200px;
-    background-color: white;
-    height: 100vh;
-    align-content: center;
 }
 
 .header {
@@ -320,6 +334,12 @@ body {
 .modal__qr-code img {
     width: 80%;
     height: 90%;
+}
+
+.footer_button {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 576px) {
